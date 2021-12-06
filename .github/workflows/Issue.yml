@@ -12,4 +12,4 @@ jobs:
         with:
          webhook_id: ${{ secrets.WEBHOOK_ID }}
          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-         message: "`${{ github.event.issue.user.login }}` created an Issue.\n **${{ github.event.issue.title }}**` \n ${{ github.event.issue.body }}"
+         message: "`${{ github.event.issue.user.login }}` created an Issue.\n **${{ github.event.issue.title }}**"
