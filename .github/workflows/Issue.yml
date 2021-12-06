@@ -12,4 +12,4 @@ jobs:
         with:
          webhook_id: ${{ secrets.WEBHOOK_ID }}
          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-         args: ${{ github.event.pull_request.user.login }} created an Issue.
+         message: "${{ github.event.pull_request.user.login }} created an Issue."
