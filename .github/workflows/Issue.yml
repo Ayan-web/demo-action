@@ -1,0 +1,14 @@
+name: Notify issue
+
+on:
+ issues:
+  types: [opened]
+  
+jobs:
+  notify_slack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sebastianpopp/discord-action@releases/v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          message:  ${{ github.event.pull_request.user.login }} created a new Issue
