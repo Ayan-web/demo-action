@@ -8,7 +8,8 @@ jobs:
   notify_slack:
     runs-on: ubuntu-latest
     steps:
-      - uses: sebastianpopp/discord-action@releases/v1
+      - uses: appleboy/discord-action@master
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          message:  ${{ github.event.pull_request.user.login }} created a new Issue
+         webhook_id: ${{ secrets.WEBHOOK_ID }}
+         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+         args: ${{ github.event.pull_request.user.login }} created an Issue.
